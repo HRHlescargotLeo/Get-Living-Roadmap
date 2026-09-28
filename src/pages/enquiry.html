@@ -12,19 +12,24 @@
   <!-- @@include header.html -->
 
   <main id="main">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 3 of 5 · Short enquiry form</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A general enquiry form that asks for five things – first and last name, email, neighbourhood and when the renter wants to move – and makes everything else optional, tucked behind a 'Tell us more' panel.</p></div>
+          <div><h2>Why</h2><p>The current form has around 13 required fields on one screen, several of which (employment status, how the renter heard about Get Living, SMS consent) matter to the leasing team but not to someone who only wants to ask a question. Those can be collected in the reply or at the viewing.</p></div>
+        </div>
+        <p class="proposal-foot">If the enquiry starts from a property page, the home and neighbourhood are filled in.</p>
+      </div>
+    </aside>
+
     <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="~/index.html">Home</a></li>
-          <li class="breadcrumb-item">Make an enquiry</li>
-        </ul>
-      </nav>
 
       <div class="split">
         <div>
           <h1>Ask us anything</h1>
           <p class="lead">Tell us a little about what you're looking for and the neighbourhood team will get back to you, usually within one working day.</p>
-          <p class="wf-note" data-note="1"><span class="wf-note-label">Prototype 3</span>The current form has around 13 required fields on one screen. This version asks for five, and makes the rest optional. Employment status, "how did you hear about us" and marketing consent move to the follow-up or the viewing.</p>
 
           <!-- Short enquiry form (R33) -->
           <p class="panel surface" id="enq-context" hidden>About: <span></span></p>
@@ -87,7 +92,7 @@
             <p>Call free on <strong>0808 164 4744</strong>.</p>
             <p><a href="~/pages/book-a-viewing.html">Or book a viewing online</a></p>
           </div>
-          <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Which fields does the CRM (HubSpot) need to route an enquiry to the right team? We've kept neighbourhood and move-in date required for that reason.</p>
+          <p class="wf-note query" data-note="1"><span class="wf-note-label">Open question</span>Which fields does the CRM (HubSpot) need to route an enquiry to the right team? We've kept neighbourhood and move-in date required for that reason.</p>
         </aside>
       </div>
     </div>

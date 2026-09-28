@@ -10,84 +10,47 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <!-- Global header (R01, R04) -->
-  <header class="sticky site-header">
-    <div class="wf-proto-bar">
-      <div class="container">
-        <span>Get Living · greyscale prototype V1 · sample data</span>
-        <a href="../index.html">All prototypes</a>
-      </div>
-    </div>
-    <nav class="nav-primary" aria-label="Primary">
-      <div class="container nav-row">
-        <a class="nav-logo" href="../index.html" aria-label="Get Living home"><span class="wf-placeholder logo">Logo</span></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
-        <ul class="nav-list" id="primary-menu">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Locations &#9662;</a>
-            <div class="nav-flyout wide">
-              <div class="flyout-columns">
-                <div class="flyout-column">
-                  <h5>London</h5>
-                  <ul>
-                    <li><a href="../pages/neighbourhood.html">East Village, Stratford</a></li>
-                    <li><a href="../pages/neighbourhood.html">Elephant Central</a></li>
-                  </ul>
-                </div>
-                <div class="flyout-column">
-                  <h5>Midlands and North</h5>
-                  <ul>
-                    <li><a href="../pages/neighbourhood.html">Sherlock Quarter, Birmingham</a></li>
-                    <li><a href="../pages/neighbourhood.html">New Maker Yards, Salford</a></li>
-                  </ul>
-                </div>
-                <div class="flyout-column">
-                  <h5>South East</h5>
-                  <ul>
-                    <li><a href="../pages/neighbourhood.html">One Maidenhead</a></li>
-                    <li><a href="../pages/neighbourhood.html">The Oakgate, Leatherhead</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Homes &#9662;</a>
-            <div class="nav-flyout">
-              <ul>
-                <li><a href="../pages/find-a-home.html">Find a home</a></li>
-                <li><a href="../pages/find-a-home.html">Co-living</a></li>
-                <li><a href="../pages/find-a-home.html#saved">Saved homes</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="../pages/renting-with-us.html">Renting with us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">The Edit</a></li>
-          <li class="nav-item nav-item--right"><a class="nav-link saved-link" href="../pages/find-a-home.html#saved">Saved (<span data-saved-count>0</span>)</a></li>
-          <li class="nav-item"><a class="btn" href="../pages/enquiry.html">Make an enquiry</a></li>
+  <!-- Prototype navigator (replaces Get Living's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html">Get Living prototypes</a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/find-a-home.html" data-proto="find-a-home"><span class="n">1</span> Find a home</a></li>
+          <li><a href="../pages/home.html" data-proto="home"><span class="n">2</span> Property page</a></li>
+          <li><a href="../pages/book-a-viewing.html" data-proto="book-a-viewing enquiry"><span class="n">3</span> Book a viewing</a></li>
+          <li><a href="../pages/renting-with-us.html" data-proto="renting-with-us"><span class="n">4</span> Renting with us</a></li>
+          <li><a href="../pages/neighbourhood.html" data-proto="neighbourhood"><span class="n">5</span> Neighbourhoods</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
   </header>
-  <div class="flyout-backdrop" aria-hidden="true"></div>
 
 
   <main id="main">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 3 of 5 · Book a viewing</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Let renters book a viewing themselves: choose in person, a video call or a live group tour, pick a slot, and leave a name and contact details. The confirmation arrives straight away. Alongside it sits a shorter enquiry form for people who aren't ready to book.</p></div>
+          <div><h2>Why</h2><p>At the moment, arranging a viewing starts with a request rather than a booking, and the enquiry form asks around 13 required questions on one screen, including employment status and how the renter heard about Get Living, before anything is arranged. Each extra field loses a few people, and the ones lost tend to be those a viewing would most likely have won over. The form also asks whether the renter lives in the UK, which suggests enough overseas interest to justify video viewings. The extra detail is still useful to the leasing team. It just doesn't need collecting before the first conversation.</p></div>
+        </div>
+        <p class="proposal-foot">The home is carried over from the property page. Slots are sample data; live availability would come from the leasing team's calendar.</p>
+      </div>
+    </aside>
+
     <div class="container" id="booking-app">
 
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="../pages/home.html">This home</a></li>
-          <li class="breadcrumb-item">Book a viewing</li>
-        </ul>
-      </nav>
 
       <div class="split">
         <div>
           <h1>Book a viewing</h1>
-          <p class="wf-note" data-note="1"><span class="wf-note-label">Prototype 3</span>Three short steps with the home already filled in, replacing the current 13-field enquiry form. The renter picks a real slot and gets an instant confirmation. Everything else we need (employment, budget, pets) is collected at or after the viewing.</p>
 
           <!-- Progress (R30) -->
           <ol class="stepper" aria-label="Booking progress">
@@ -121,8 +84,8 @@
             <div class="date-strip" id="date-strip" role="group" aria-label="Days"></div>
             <div class="slot-grid" id="slot-grid" role="group" aria-label="Times"></div>
             <p class="field-error" id="slot-error" hidden>Choose a day and a time</p>
-            <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Shows the next two weeks. Sundays are closed; group tours only appear on Wednesdays and Saturdays. Booked slots are struck through. Live slots would come from the leasing team's calendar.</p>
-            <p class="wf-note query" data-note="3"><span class="wf-note-label">Open question</span>Which calendar or CRM holds viewing availability today, and can it be read by the website?</p>
+            <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Shows the next two weeks. Sundays are closed; group tours only appear on Wednesdays and Saturdays. Booked slots are struck through. Live slots would come from the leasing team's calendar.</p>
+            <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Which calendar or CRM holds viewing availability today, and can it be read by the website?</p>
             <div class="step-nav">
               <button type="button" class="btn btn-secondary" data-back>Back</button>
               <button type="button" class="btn" data-next>Continue</button>
@@ -196,47 +159,11 @@
     </div>
   </main>
 
-  <!-- Global footer (existing structure, unchanged) -->
-  <footer>
+  <!-- Prototype pager (replaces Get Living's own footer) -->
+  <footer class="proto-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h4>About</h4>
-          <ul>
-            <li><a href="#">Our story</a></li>
-            <li><a href="#">Join the team</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Residents</h4>
-          <ul>
-            <li><a href="#">Resident app</a></li>
-            <li><a href="#">Resident portal log-in</a></li>
-            <li><a href="#">Resident events</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Living with us</h4>
-          <ul>
-            <li><a href="../pages/renting-with-us.html">Renting with us</a></li>
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="../pages/find-a-home.html">Find a home</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="../pages/enquiry.html">Make an enquiry</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Complaints procedure</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="wf-placeholder footer-logos">Awards and accreditation logos</div>
-      <div class="footer-bottom">
-        <span>&copy; Get Living · Privacy · Terms · Modern slavery statement</span>
-        <span>Wireframe — structure only, not a design</span>
-      </div>
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">ClerksWell · Greyscale prototypes for discussion · Sample data</p>
     </div>
   </footer>
 

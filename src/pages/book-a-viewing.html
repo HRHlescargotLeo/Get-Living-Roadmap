@@ -12,20 +12,24 @@
   <!-- @@include header.html -->
 
   <main id="main">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 3 of 5 · Book a viewing</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Let renters book a viewing themselves: choose in person, a video call or a live group tour, pick a slot, and leave a name and contact details. The confirmation arrives straight away. Alongside it sits a shorter enquiry form for people who aren't ready to book.</p></div>
+          <div><h2>Why</h2><p>At the moment, arranging a viewing starts with a request rather than a booking, and the enquiry form asks around 13 required questions on one screen, including employment status and how the renter heard about Get Living, before anything is arranged. Each extra field loses a few people, and the ones lost tend to be those a viewing would most likely have won over. The form also asks whether the renter lives in the UK, which suggests enough overseas interest to justify video viewings. The extra detail is still useful to the leasing team. It just doesn't need collecting before the first conversation.</p></div>
+        </div>
+        <p class="proposal-foot">The home is carried over from the property page. Slots are sample data; live availability would come from the leasing team's calendar.</p>
+      </div>
+    </aside>
+
     <div class="container" id="booking-app">
 
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="~/index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="~/pages/home.html">This home</a></li>
-          <li class="breadcrumb-item">Book a viewing</li>
-        </ul>
-      </nav>
 
       <div class="split">
         <div>
           <h1>Book a viewing</h1>
-          <p class="wf-note" data-note="1"><span class="wf-note-label">Prototype 3</span>Three short steps with the home already filled in, replacing the current 13-field enquiry form. The renter picks a real slot and gets an instant confirmation. Everything else we need (employment, budget, pets) is collected at or after the viewing.</p>
 
           <!-- Progress (R30) -->
           <ol class="stepper" aria-label="Booking progress">
@@ -59,8 +63,8 @@
             <div class="date-strip" id="date-strip" role="group" aria-label="Days"></div>
             <div class="slot-grid" id="slot-grid" role="group" aria-label="Times"></div>
             <p class="field-error" id="slot-error" hidden>Choose a day and a time</p>
-            <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Shows the next two weeks. Sundays are closed; group tours only appear on Wednesdays and Saturdays. Booked slots are struck through. Live slots would come from the leasing team's calendar.</p>
-            <p class="wf-note query" data-note="3"><span class="wf-note-label">Open question</span>Which calendar or CRM holds viewing availability today, and can it be read by the website?</p>
+            <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Shows the next two weeks. Sundays are closed; group tours only appear on Wednesdays and Saturdays. Booked slots are struck through. Live slots would come from the leasing team's calendar.</p>
+            <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Which calendar or CRM holds viewing availability today, and can it be read by the website?</p>
             <div class="step-nav">
               <button type="button" class="btn btn-secondary" data-back>Back</button>
               <button type="button" class="btn" data-next>Continue</button>

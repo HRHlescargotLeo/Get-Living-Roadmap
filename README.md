@@ -1,4 +1,4 @@
-# Get Living — greyscale prototypes (V1)
+# Get Living — greyscale prototypes (V1.2)
 
 Five clickable, greyscale prototypes for improvements to getliving.com, prepared by ClerksWell
 following the phase 1 review (28 September 2026). Structure and behaviour only; the visual
@@ -25,8 +25,8 @@ Module library: `modules/library.html`. Requirements: `requirements/requirements
 ```
 node build-includes.js && node validate.js
 ```
-Edit files in `src/`; `docs/` is generated (commit it, as GitHub Pages serves it). Header and footer live in `src/includes/`.
+Edit files in `src/`; `docs/` is generated (commit it, as GitHub Pages serves it). The prototype navigator (top bar with the Notes switch) and the previous/next footer live in `src/includes/`.
 Listings are sample data in `src/js/data.js`.
 
 ## Status
-V1, internal review. Annotations are hidden by default; use "Show annotations" on any page.
+V1.2, internal review. Get Living's own header and footer are replaced by a prototype navigator. Notes are off by default; switch "Notes on" in the top bar to show what each prototype proposes and why, plus in-page annotations.

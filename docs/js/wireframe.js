@@ -225,34 +225,64 @@
     });
   }
 
-  /* --- Annotation toggle -------------------------------------------------
-     Injects the floating control only when the page actually has notes, and
-     remembers the choice for the session so a reviewer clicking through ten
-     pages does not have to hide notes ten times. */
+  /* --- Notes toggle -------------------------------------------------------
+     A switch in the prototype navigator shows or hides everything marked
+     as a note: the "what we're proposing and why" panel at the top of each
+     prototype and the numbered annotations within it. Off by default; the
+     choice is remembered for the session so it carries between prototypes. */
   function initNotes() {
-    if (!document.querySelector('.wf-note')) return;
-
-    var hidden = false;
-    try { hidden = window.sessionStorage.getItem('wf-notes-hidden') === '1'; } catch (e) { /* private mode */ }
-
-    var button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'wf-notes-toggle';
+    var hidden = true;
+    try { hidden = window.sessionStorage.getItem('wf-notes-hidden') !== '0'; } catch (e) { /* private mode */ }
+    var toggles = document.querySelectorAll('[data-notes-toggle]');
+    if (!document.querySelector('.wf-note, .proposal')) {
+      toggles.forEach(function (t) { t.hidden = true; });
+      return;
+    }
 
     function apply() {
       document.body.classList.toggle('wf-notes-hidden', hidden);
-      button.textContent = hidden ? 'Show annotations' : 'Hide annotations';
-      button.setAttribute('aria-pressed', hidden ? 'true' : 'false');
+      toggles.forEach(function (t) {
+        t.setAttribute('aria-checked', hidden ? 'false' : 'true');
+        var l = t.querySelector('.notes-label');
+        if (l) l.textContent = hidden ? 'Notes off' : 'Notes on';
+      });
     }
-
-    button.addEventListener('click', function () {
-      hidden = !hidden;
-      try { window.sessionStorage.setItem('wf-notes-hidden', hidden ? '1' : '0'); } catch (e) { /* private mode */ }
-      apply();
+    toggles.forEach(function (t) {
+      t.addEventListener('click', function () {
+        hidden = !hidden;
+        try { window.sessionStorage.setItem('wf-notes-hidden', hidden ? '1' : '0'); } catch (e) { /* private mode */ }
+        apply();
+        if (!hidden) {
+          var panel = document.querySelector('.proposal');
+          if (panel && panel.getBoundingClientRect().top < 0) panel.scrollIntoView({ block: 'start' });
+        }
+      });
     });
-
-    document.body.appendChild(button);
     apply();
+  }
+
+  /* --- Prototype navigator: current page and previous / next ------------- */
+  function initProtoNav() {
+    var file = (window.location.pathname.split('/').pop() || 'index.html').replace('.html', '') || 'index';
+    var links = Array.prototype.slice.call(document.querySelectorAll('.proto-links a[data-proto]'));
+    var index = -1;
+    links.forEach(function (a, i) {
+      var match = a.getAttribute('data-proto').split(' ').indexOf(file) !== -1;
+      if (match) { a.setAttribute('aria-current', 'page'); index = i; }
+    });
+    var current = document.querySelector('.proto-links a[aria-current]');
+    if (current && current.scrollIntoView && window.innerWidth < 1024) {
+      var list = current.closest('.proto-links');
+      if (list) list.scrollLeft = current.offsetLeft - 16;
+    }
+    var pager = document.querySelector('[data-proto-pager]');
+    if (!pager || index < 0) return;
+    function label(a) { return a.textContent.replace(/\s+/g, ' ').trim(); }
+    var html = '';
+    if (index > 0) html += '<a class="prev" href="' + links[index - 1].getAttribute('href') + '"><span class="wf-meta">Previous</span>' + label(links[index - 1]) + '</a>';
+    else html += '<span></span>';
+    if (index < links.length - 1) html += '<a class="next" href="' + links[index + 1].getAttribute('href') + '"><span class="wf-meta">Next</span>' + label(links[index + 1]) + '</a>';
+    pager.innerHTML = html;
   }
 
   /* ======================================================================
@@ -1012,12 +1042,6 @@
     }
   }
 
-  /* --- Hub: carry the notes toggle default ------------------------------
-     Annotations start hidden (house preference for concept packs) unless the
-     reviewer has chosen to show them this session. */
-  (function defaultNotesHidden() {
-    try { if (window.sessionStorage.getItem('wf-notes-hidden') === null) window.sessionStorage.setItem('wf-notes-hidden', '1'); } catch (e) { /* private mode */ }
-  })();
 
   document.addEventListener('DOMContentLoaded', function () {
     initNav();
@@ -1026,6 +1050,7 @@
     initCarousels();
     initModals();
     initNotes();
+    initProtoNav();
     initHeaderHeight();
     initMobileNav();
     initSaved();

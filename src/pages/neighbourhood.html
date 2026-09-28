@@ -12,18 +12,23 @@
   <!-- @@include header.html -->
 
   <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 5 of 5 · Neighbourhoods</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>One template for all six neighbourhood pages, shown here with Sherlock Quarter. Each page carries live availability and prices by home size, a map with layers for transport, green space and local amenities, journey times, reviews, events and questions specific to that neighbourhood.</p></div>
+          <div><h2>Why</h2><p>The neighbourhood pages vary a good deal. East Village has a commute calculator and detailed transport times; others have much less. None of the pages we looked at show what homes cost or how many are available, so a renter who likes the sound of a place has to leave the page and start a search to find out. A shared template keeps the six pages consistent, and neighbourhood-level questions and answers give search engines, and the AI tools people increasingly search with, something specific to quote.</p></div>
+        </div>
+        <p class="proposal-foot">Availability and prices come from the listings (sample data here), so they stay current without anyone editing the page.</p>
+      </div>
+    </aside>
+
     <div id="hood-app" data-hood="sherlock-quarter">
 
       <!-- Hero and key strip (R50, R51, R56) -->
       <div class="page-head">
         <div class="container">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ul class="breadcrumb-list">
-              <li class="breadcrumb-item"><a href="~/index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Locations</a></li>
-              <li class="breadcrumb-item">Sherlock Quarter, Birmingham</li>
-            </ul>
-          </nav>
           <div class="hood-hero">
             <div>
               <div class="wf-placeholder logo">Sherlock Quarter logo</div>
@@ -39,7 +44,6 @@
             <div><b>4.67</b><span>HomeViews score, 19 reviews</span></div>
             <div><b>14 min</b><span>walk to New Street station</span></div>
           </div>
-          <p class="wf-note" data-note="1"><span class="wf-note-label">Prototype 5</span>One template for all six neighbourhoods. Shown here with Sherlock Quarter content. Availability and prices in the strip and the home-size cards come from live listings (sample data here), so they never go out of date.</p>
         </div>
       </div>
 
@@ -69,7 +73,7 @@
             <a class="size-card" data-beds="3" href="#"><span>3 bedrooms</span><b>…</b><span class="count"></span></a>
             <a class="size-card" href="~/pages/find-a-home.html?hood=sherlock-quarter"><span>All homes</span><b>See everything</b><span class="count">With filters and map</span></a>
           </div>
-          <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Each card opens Find a home already filtered to this neighbourhood and size. When a size has nothing available, the card offers an alert instead of a dead end.</p>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Each card opens Find a home already filtered to this neighbourhood and size. When a size has nothing available, the card offers an alert instead of a dead end.</p>
           <div class="grid grid-2" style="margin-top:1.5rem">
             <div class="panel"><h3>Furnished homes, ready to move into</h3><p>Every home comes furnished with integrated appliances and storage. Wi-Fi is included in the rent, and pets are welcome.</p></div>
             <div class="panel"><h3>Buildings</h3><p>Printers Place · Mitton House · Sadlers Place · Cooper House</p><p class="wf-meta">Each building links to its own homes list.</p></div>
@@ -138,7 +142,7 @@
               <div class="commute-result" hidden></div>
             </div>
           </div>
-          <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Layer chips switch groups of places on and off. Places in Get Living's own commercial spaces could be highlighted. Walk times are placeholders apart from New Street, which is taken from the current site.</p>
+          <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Layer chips switch groups of places on and off. Places in Get Living's own commercial spaces could be highlighted. Walk times are placeholders apart from New Street, which is taken from the current site.</p>
         </section>
 
         <!-- Reviews (R56) -->
@@ -153,7 +157,7 @@
             </div>
             <blockquote class="wf-quote"><p>[Most recent verified review for Sherlock Quarter, 30–60 words.]</p><cite>Resident name · HomeViews · [month year]</cite></blockquote>
           </div>
-          <p class="wf-note query" data-note="4"><span class="wf-note-label">Open question</span>Show reviews on every neighbourhood page, or only where the score is strong? One Maidenhead currently scores 3.42 from 10 reviews.</p>
+          <p class="wf-note query" data-note="3"><span class="wf-note-label">Open question</span>Show reviews on every neighbourhood page, or only where the score is strong? One Maidenhead currently scores 3.42 from 10 reviews.</p>
         </section>
 
         <!-- Events (R55) -->
@@ -164,7 +168,7 @@
             <li><div class="event-date">Oct<b>16</b></div><div><strong>Sky Lounge supper club</strong><div class="wf-meta">29th floor · 7pm</div></div><span class="badge solid">Residents only</span></li>
             <li><div class="event-date">Oct<b>24</b></div><div><strong>Open house: tour the homes and shared spaces</strong><div class="wf-meta">Leasing suite · 11am to 3pm</div></div><span class="badge">Open to all</span></li>
           </ul>
-          <p class="wf-note" data-note="5"><span class="wf-note-label">Content</span>Illustrative events. Open events let prospective renters see the community in person; residents-only events show what they'd get.</p>
+          <p class="wf-note" data-note="4"><span class="wf-note-label">Content</span>Illustrative events. Open events let prospective renters see the community in person; residents-only events show what they'd get.</p>
         </section>
 
         <!-- FAQs (R54) -->
@@ -177,7 +181,7 @@
             <div class="accordion-item"><button type="button" class="accordion-title">Can I bring my dog?<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>Yes, at no extra cost. There are courtyards and podium gardens across the neighbourhood.</p></div></div>
             <div class="accordion-item"><button type="button" class="accordion-title">Who's on site?<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>A neighbourhood team with concierge, and a dedicated maintenance team.</p></div></div>
           </div>
-          <p class="wf-note" data-note="6"><span class="wf-note-label">Search</span>Neighbourhood FAQs are marked up as structured data so search engines and AI search tools can quote them. Answers here come from the current Sherlock Quarter listing text.</p>
+          <p class="wf-note" data-note="5"><span class="wf-note-label">Search</span>Neighbourhood FAQs are marked up as structured data so search engines and AI search tools can quote them. Answers here come from the current Sherlock Quarter listing text.</p>
         </section>
 
         <section class="panel surface" aria-label="Next steps">

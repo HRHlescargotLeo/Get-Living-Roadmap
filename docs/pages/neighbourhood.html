@@ -10,82 +10,46 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <!-- Global header (R01, R04) -->
-  <header class="sticky site-header">
-    <div class="wf-proto-bar">
-      <div class="container">
-        <span>Get Living · greyscale prototype V1 · sample data</span>
-        <a href="../index.html">All prototypes</a>
-      </div>
-    </div>
-    <nav class="nav-primary" aria-label="Primary">
-      <div class="container nav-row">
-        <a class="nav-logo" href="../index.html" aria-label="Get Living home"><span class="wf-placeholder logo">Logo</span></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
-        <ul class="nav-list" id="primary-menu">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Locations &#9662;</a>
-            <div class="nav-flyout wide">
-              <div class="flyout-columns">
-                <div class="flyout-column">
-                  <h5>London</h5>
-                  <ul>
-                    <li><a href="../pages/neighbourhood.html">East Village, Stratford</a></li>
-                    <li><a href="../pages/neighbourhood.html">Elephant Central</a></li>
-                  </ul>
-                </div>
-                <div class="flyout-column">
-                  <h5>Midlands and North</h5>
-                  <ul>
-                    <li><a href="../pages/neighbourhood.html">Sherlock Quarter, Birmingham</a></li>
-                    <li><a href="../pages/neighbourhood.html">New Maker Yards, Salford</a></li>
-                  </ul>
-                </div>
-                <div class="flyout-column">
-                  <h5>South East</h5>
-                  <ul>
-                    <li><a href="../pages/neighbourhood.html">One Maidenhead</a></li>
-                    <li><a href="../pages/neighbourhood.html">The Oakgate, Leatherhead</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Homes &#9662;</a>
-            <div class="nav-flyout">
-              <ul>
-                <li><a href="../pages/find-a-home.html">Find a home</a></li>
-                <li><a href="../pages/find-a-home.html">Co-living</a></li>
-                <li><a href="../pages/find-a-home.html#saved">Saved homes</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="../pages/renting-with-us.html">Renting with us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">The Edit</a></li>
-          <li class="nav-item nav-item--right"><a class="nav-link saved-link" href="../pages/find-a-home.html#saved">Saved (<span data-saved-count>0</span>)</a></li>
-          <li class="nav-item"><a class="btn" href="../pages/enquiry.html">Make an enquiry</a></li>
+  <!-- Prototype navigator (replaces Get Living's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html">Get Living prototypes</a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/find-a-home.html" data-proto="find-a-home"><span class="n">1</span> Find a home</a></li>
+          <li><a href="../pages/home.html" data-proto="home"><span class="n">2</span> Property page</a></li>
+          <li><a href="../pages/book-a-viewing.html" data-proto="book-a-viewing enquiry"><span class="n">3</span> Book a viewing</a></li>
+          <li><a href="../pages/renting-with-us.html" data-proto="renting-with-us"><span class="n">4</span> Renting with us</a></li>
+          <li><a href="../pages/neighbourhood.html" data-proto="neighbourhood"><span class="n">5</span> Neighbourhoods</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
   </header>
-  <div class="flyout-backdrop" aria-hidden="true"></div>
 
 
   <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 5 of 5 · Neighbourhoods</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>One template for all six neighbourhood pages, shown here with Sherlock Quarter. Each page carries live availability and prices by home size, a map with layers for transport, green space and local amenities, journey times, reviews, events and questions specific to that neighbourhood.</p></div>
+          <div><h2>Why</h2><p>The neighbourhood pages vary a good deal. East Village has a commute calculator and detailed transport times; others have much less. None of the pages we looked at show what homes cost or how many are available, so a renter who likes the sound of a place has to leave the page and start a search to find out. A shared template keeps the six pages consistent, and neighbourhood-level questions and answers give search engines, and the AI tools people increasingly search with, something specific to quote.</p></div>
+        </div>
+        <p class="proposal-foot">Availability and prices come from the listings (sample data here), so they stay current without anyone editing the page.</p>
+      </div>
+    </aside>
+
     <div id="hood-app" data-hood="sherlock-quarter">
 
       <!-- Hero and key strip (R50, R51, R56) -->
       <div class="page-head">
         <div class="container">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ul class="breadcrumb-list">
-              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Locations</a></li>
-              <li class="breadcrumb-item">Sherlock Quarter, Birmingham</li>
-            </ul>
-          </nav>
           <div class="hood-hero">
             <div>
               <div class="wf-placeholder logo">Sherlock Quarter logo</div>
@@ -101,7 +65,6 @@
             <div><b>4.67</b><span>HomeViews score, 19 reviews</span></div>
             <div><b>14 min</b><span>walk to New Street station</span></div>
           </div>
-          <p class="wf-note" data-note="1"><span class="wf-note-label">Prototype 5</span>One template for all six neighbourhoods. Shown here with Sherlock Quarter content. Availability and prices in the strip and the home-size cards come from live listings (sample data here), so they never go out of date.</p>
         </div>
       </div>
 
@@ -131,7 +94,7 @@
             <a class="size-card" data-beds="3" href="#"><span>3 bedrooms</span><b>…</b><span class="count"></span></a>
             <a class="size-card" href="../pages/find-a-home.html?hood=sherlock-quarter"><span>All homes</span><b>See everything</b><span class="count">With filters and map</span></a>
           </div>
-          <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Each card opens Find a home already filtered to this neighbourhood and size. When a size has nothing available, the card offers an alert instead of a dead end.</p>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Each card opens Find a home already filtered to this neighbourhood and size. When a size has nothing available, the card offers an alert instead of a dead end.</p>
           <div class="grid grid-2" style="margin-top:1.5rem">
             <div class="panel"><h3>Furnished homes, ready to move into</h3><p>Every home comes furnished with integrated appliances and storage. Wi-Fi is included in the rent, and pets are welcome.</p></div>
             <div class="panel"><h3>Buildings</h3><p>Printers Place · Mitton House · Sadlers Place · Cooper House</p><p class="wf-meta">Each building links to its own homes list.</p></div>
@@ -200,7 +163,7 @@
               <div class="commute-result" hidden></div>
             </div>
           </div>
-          <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Layer chips switch groups of places on and off. Places in Get Living's own commercial spaces could be highlighted. Walk times are placeholders apart from New Street, which is taken from the current site.</p>
+          <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Layer chips switch groups of places on and off. Places in Get Living's own commercial spaces could be highlighted. Walk times are placeholders apart from New Street, which is taken from the current site.</p>
         </section>
 
         <!-- Reviews (R56) -->
@@ -215,7 +178,7 @@
             </div>
             <blockquote class="wf-quote"><p>[Most recent verified review for Sherlock Quarter, 30–60 words.]</p><cite>Resident name · HomeViews · [month year]</cite></blockquote>
           </div>
-          <p class="wf-note query" data-note="4"><span class="wf-note-label">Open question</span>Show reviews on every neighbourhood page, or only where the score is strong? One Maidenhead currently scores 3.42 from 10 reviews.</p>
+          <p class="wf-note query" data-note="3"><span class="wf-note-label">Open question</span>Show reviews on every neighbourhood page, or only where the score is strong? One Maidenhead currently scores 3.42 from 10 reviews.</p>
         </section>
 
         <!-- Events (R55) -->
@@ -226,7 +189,7 @@
             <li><div class="event-date">Oct<b>16</b></div><div><strong>Sky Lounge supper club</strong><div class="wf-meta">29th floor · 7pm</div></div><span class="badge solid">Residents only</span></li>
             <li><div class="event-date">Oct<b>24</b></div><div><strong>Open house: tour the homes and shared spaces</strong><div class="wf-meta">Leasing suite · 11am to 3pm</div></div><span class="badge">Open to all</span></li>
           </ul>
-          <p class="wf-note" data-note="5"><span class="wf-note-label">Content</span>Illustrative events. Open events let prospective renters see the community in person; residents-only events show what they'd get.</p>
+          <p class="wf-note" data-note="4"><span class="wf-note-label">Content</span>Illustrative events. Open events let prospective renters see the community in person; residents-only events show what they'd get.</p>
         </section>
 
         <!-- FAQs (R54) -->
@@ -239,7 +202,7 @@
             <div class="accordion-item"><button type="button" class="accordion-title">Can I bring my dog?<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>Yes, at no extra cost. There are courtyards and podium gardens across the neighbourhood.</p></div></div>
             <div class="accordion-item"><button type="button" class="accordion-title">Who's on site?<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>A neighbourhood team with concierge, and a dedicated maintenance team.</p></div></div>
           </div>
-          <p class="wf-note" data-note="6"><span class="wf-note-label">Search</span>Neighbourhood FAQs are marked up as structured data so search engines and AI search tools can quote them. Answers here come from the current Sherlock Quarter listing text.</p>
+          <p class="wf-note" data-note="5"><span class="wf-note-label">Search</span>Neighbourhood FAQs are marked up as structured data so search engines and AI search tools can quote them. Answers here come from the current Sherlock Quarter listing text.</p>
         </section>
 
         <section class="panel surface" aria-label="Next steps">
@@ -252,47 +215,11 @@
     </div>
   </main>
 
-  <!-- Global footer (existing structure, unchanged) -->
-  <footer>
+  <!-- Prototype pager (replaces Get Living's own footer) -->
+  <footer class="proto-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h4>About</h4>
-          <ul>
-            <li><a href="#">Our story</a></li>
-            <li><a href="#">Join the team</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Residents</h4>
-          <ul>
-            <li><a href="#">Resident app</a></li>
-            <li><a href="#">Resident portal log-in</a></li>
-            <li><a href="#">Resident events</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Living with us</h4>
-          <ul>
-            <li><a href="../pages/renting-with-us.html">Renting with us</a></li>
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="../pages/find-a-home.html">Find a home</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="../pages/enquiry.html">Make an enquiry</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Complaints procedure</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="wf-placeholder footer-logos">Awards and accreditation logos</div>
-      <div class="footer-bottom">
-        <span>&copy; Get Living · Privacy · Terms · Modern slavery statement</span>
-        <span>Wireframe — structure only, not a design</span>
-      </div>
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">ClerksWell · Greyscale prototypes for discussion · Sample data</p>
     </div>
   </footer>
 

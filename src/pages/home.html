@@ -12,17 +12,21 @@
   <!-- @@include header.html -->
 
   <main id="main">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 2 of 5 · Property page</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Move the facts that currently sit at the bottom of each listing, under 'The fine print', up beside the photos, and add two things the page doesn't yet have: an estimate of what it costs to live there each month, and a breakdown of what has to be paid before moving in. Journey times and similar homes follow further down.</p></div>
+          <div><h2>Why</h2><p>Everything a renter needs to work out the real cost of a home is already on the page – the deposit options, how hot water is billed, the council tax band, parking charges – but it is written as paragraphs of small print at the end. On HomeViews, residents rate Get Living lowest on value, at 4.0 out of 5 against 4.42 overall. That may say as much about how costs are explained as about the costs themselves. A page that answers the money question up front should also cut the number of enquiries that exist only to ask it.</p></div>
+        </div>
+        <p class="proposal-foot">Open any home from Find a home to load it here; by default it shows a two-bedroom at Printers Place. Figures marked as estimates are illustrative.</p>
+      </div>
+    </aside>
+
     <div class="container" id="property-app">
 
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="~/index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="~/pages/find-a-home.html">Find a home</a></li>
-          <li class="breadcrumb-item"><span data-home="hood">Sherlock Quarter</span></li>
-        </ul>
-      </nav>
 
-      <p class="wf-note" data-note="1"><span class="wf-note-label">Prototype 2</span>The property page answers "what will this really cost me?" before the renter has to ask. Open any home from Find a home to load it here; this page defaults to a two-bedroom at Printers Place. Figures marked "estimate" are illustrative.</p>
 
       <!-- Gallery + key facts (R20, R24) -->
       <section class="prop-top" aria-label="Photos and key facts">
@@ -75,7 +79,7 @@
               <button type="button" class="btn btn-secondary btn-sm" data-share>Share</button>
             </div>
           </div>
-          <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Facts that currently sit in "The fine print" move here. The panel stays in view beside the photos on desktop. On mobile it sits under the gallery and a Book / Ask bar is fixed to the bottom of the screen.</p>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Facts that currently sit in "The fine print" move here. The panel stays in view beside the photos on desktop. On mobile it sits under the gallery and a Book / Ask bar is fixed to the bottom of the screen.</p>
         </aside>
       </section>
 
@@ -116,7 +120,7 @@
             </ul>
           </div>
         </div>
-        <p class="wf-note" data-note="3"><span class="wf-note-label">Content</span>Descriptions follow a short house style: one lead sentence, one paragraph, then amenities as lists. No capitals for emphasis. Building amenities are pulled from the building record so every home in it stays consistent.</p>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Content</span>Descriptions follow a short house style: one lead sentence, one paragraph, then amenities as lists. No capitals for emphasis. Building amenities are pulled from the building record so every home in it stays consistent.</p>
       </section>
 
       <!-- Monthly cost estimate (R21) -->
@@ -146,9 +150,9 @@
             </table>
           </div>
           <div class="stack">
-            <p class="wf-note" data-note="4"><span class="wf-note-label">Behaviour</span>Totals update as the renter changes the number of people or adds extras. Living alone applies the 25% council tax single person discount.</p>
-            <p class="wf-note query" data-note="5"><span class="wf-note-label">Open question</span>Can Get Living supply average energy, hot water (Homebox) and water costs by home size for each building? The figures here are placeholders. Parking and storage prices vary by neighbourhood.</p>
-            <p class="wf-note query" data-note="6"><span class="wf-note-label">Open question</span>Show council tax as a range for the band, or link out to the council's own figures?</p>
+            <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Totals update as the renter changes the number of people or adds extras. Living alone applies the 25% council tax single person discount.</p>
+            <p class="wf-note query" data-note="4"><span class="wf-note-label">Open question</span>Can Get Living supply average energy, hot water (Homebox) and water costs by home size for each building? The figures here are placeholders. Parking and storage prices vary by neighbourhood.</p>
+            <p class="wf-note query" data-note="5"><span class="wf-note-label">Open question</span>Show council tax as a range for the band, or link out to the council's own figures?</p>
           </div>
         </div>
       </section>
@@ -183,7 +187,7 @@
           </div>
           <div class="stack">
             <p class="panel surface">No admin fees, no referencing fees, no fees to renew. <a href="~/pages/renting-with-us.html">How renting with us works</a></p>
-            <p class="wf-note query" data-note="7"><span class="wf-note-label">Open question</span>Get Living's legal team to confirm payment timings and wording under the Renters' Rights Act before this goes live.</p>
+            <p class="wf-note query" data-note="6"><span class="wf-note-label">Open question</span>Get Living's legal team to confirm payment timings and wording under the Renters' Rights Act before this goes live.</p>
           </div>
         </div>
       </section>

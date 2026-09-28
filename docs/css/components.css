@@ -481,3 +481,53 @@ body.hub section { margin: 3rem 0; }
 .hub-links li:last-child { border-bottom: 0; }
 .hub-links span { font-size: 0.875rem; color: var(--wf-text-muted); }
 .hub-footer { margin-top: 2rem; padding: 1.5rem 0; font-size: 0.875rem; color: var(--wf-text-muted); }
+
+/* ==========================================================================
+   V1.2 — prototype navigator, notes switch and proposal panel
+   Replaces Get Living's own header and footer so the pack reads as a set of
+   prototypes, not a copy of the site.
+   ========================================================================== */
+.proto-nav { background: var(--wf-page); border-bottom: 1px solid var(--wf-border-strong); }
+.proto-nav-row { display: flex; align-items: center; gap: 1.25rem; min-height: 60px; }
+.proto-home { font-weight: 700; color: var(--wf-text); white-space: nowrap; }
+.proto-home:hover { color: var(--wf-action); }
+.proto-nav nav { flex: 1; min-width: 0; }
+.proto-links { list-style: none; display: flex; gap: 0.25rem; overflow-x: auto; scrollbar-width: thin; }
+.proto-links a { display: flex; align-items: center; gap: 0.35rem; padding: 1.1rem 0.5rem; color: var(--wf-text); white-space: nowrap; font-size: 0.9375rem; border-bottom: 3px solid transparent; }
+.proto-links a:hover { color: var(--wf-action); text-decoration: none; }
+.proto-links a[aria-current="page"] { border-bottom-color: var(--wf-text); font-weight: 600; }
+.proto-links .n { display: inline-flex; width: 1.4rem; height: 1.4rem; border: 1px solid currentColor; border-radius: 50%; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+.notes-toggle { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.75rem; border: 1px solid var(--wf-border-strong); border-radius: 999px; background: var(--wf-page); font: inherit; font-size: 0.875rem; font-weight: 600; cursor: pointer; color: var(--wf-text); white-space: nowrap; }
+.notes-toggle[hidden] { display: none; }
+.notes-track { position: relative; width: 2.1rem; height: 1.2rem; border-radius: 999px; background: var(--wf-border-strong); transition: background 0.15s; }
+.notes-thumb { position: absolute; top: 2px; left: 2px; width: calc(1.2rem - 4px); height: calc(1.2rem - 4px); border-radius: 50%; background: var(--wf-page); transition: transform 0.15s; }
+.notes-toggle[aria-checked="true"] .notes-track { background: var(--wf-action); }
+.notes-toggle[aria-checked="true"] .notes-thumb { transform: translateX(0.9rem); }
+@media (max-width: 1280px) {
+  .proto-nav-row { flex-wrap: wrap; gap: 0 1rem; padding-top: 0.5rem; }
+  .proto-home { order: 1; }
+  .notes-toggle { order: 2; margin-left: auto; }
+  .proto-nav nav { order: 3; flex-basis: 100%; }
+  .proto-links a { padding: 0.75rem 0.6rem; }
+}
+
+/* Proposal panel: what we're proposing and why */
+.proposal { background: var(--wf-note-bg); border-bottom: 1px solid var(--wf-note-border); padding: 1.75rem 0; margin-bottom: 1.5rem; }
+main.flush .proposal { margin-bottom: 0; }
+.proposal-eyebrow { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+.proposal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 2.5rem; }
+@media (max-width: 768px) { .proposal-grid { grid-template-columns: minmax(0, 1fr); } }
+.proposal h2 { font-size: 1.125rem; margin-bottom: 0.4rem; }
+.proposal p { max-width: 68ch; }
+.proposal-grid p { margin: 0; }
+.proposal-foot { font-size: 0.875rem; color: var(--wf-text-muted); margin: 1rem 0 0; }
+body.wf-notes-hidden .proposal { display: none; }
+
+/* Footer pager */
+.proto-footer { background: var(--wf-surface); border-top: 1px solid var(--wf-border); padding: 1.5rem 0; margin-top: 4rem; }
+.proto-pager { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.proto-pager a { display: grid; gap: 0.1rem; padding: 0.75rem 1rem; border: 1px solid var(--wf-border); border-radius: var(--wf-radius); background: var(--wf-page); font-weight: 600; }
+.proto-pager a:hover { border-color: var(--wf-action); text-decoration: none; }
+.proto-pager .next { text-align: right; margin-left: auto; }
+.proto-footer .wf-meta { margin: 0; }
+body.hub .hub-hero { border-top: 0; }

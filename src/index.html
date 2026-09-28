@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="~/css/theme.css">
 </head>
 <body class="hub">
+  <!-- @@include header.html -->
   <!-- Landing page for the prototype pack -->
-  <header class="hub-hero">
+  <div class="hub-hero">
     <div class="container">
       <div class="hub-brand">
         <span class="wf-placeholder logo">Get Living logo</span>
@@ -25,7 +26,7 @@
         <span>Sample data</span>
       </div>
     </div>
-  </header>
+  </div>
 
   <main id="main">
     <div class="container">
@@ -59,7 +60,7 @@
             <div class="proto-body">
               <span class="proto-num">3</span>
               <h3><a href="~/pages/book-a-viewing.html">Book a viewing in under a minute</a></h3>
-              <p>Choose in person, video call or a live group tour, pick a slot and confirm. Alongside it, a <a href="~/pages/enquiry.html">shorter enquiry form</a> with six required fields instead of around 13.</p>
+              <p>Choose in person, video call or a live group tour, pick a slot and confirm. Alongside it, a <a href="~/pages/enquiry.html">shorter enquiry form</a> with five required fields instead of around 13.</p>
               <p class="proto-try"><strong>Try:</strong> book a live group tour and see which days are offered.</p>
               <a class="btn" href="~/pages/book-a-viewing.html">Open prototype</a>
             </div>
@@ -93,7 +94,7 @@
           <h2 class="hub-h2" id="review-title">How to review</h2>
           <ul>
             <li>Everything interactive works: filters, map pins, saving, comparing, the cost estimate, booking steps and forms. Links to pages outside these five go nowhere by design.</li>
-            <li>Select "Show annotations" at the bottom right of any page for notes on behaviour (yellow) and open questions for Get Living (red).</li>
+            <li>Use the bar at the top to move between prototypes. Switch <strong>Notes on</strong> (top right) to see what each prototype proposes and why, plus notes on behaviour (yellow) and open questions for Get Living (red). Notes start switched off.</li>
             <li>Listings are sample data. Neighbourhood and building names and rent levels follow the live site; sizes, floors, dates and offers are illustrative.</li>
             <li>Works on a phone: open this page on your mobile to check the layouts.</li>
           </ul>
@@ -109,11 +110,7 @@
     </div>
   </main>
 
-  <footer class="hub-footer">
-    <div class="container">
-      <span>ClerksWell · Prototypes for discussion · Not affiliated with or endorsed by Get Living</span>
-    </div>
-  </footer>
+  <!-- @@include footer.html -->
   <script src="~/js/data.js"></script>
   <script src="~/js/wireframe.js"></script>
 </body>
