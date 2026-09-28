@@ -1,1 +1,27 @@
-# Get-Living-Roadmap
+# Get Living — greyscale prototypes (V1)
+
+Five clickable, greyscale prototypes for improvements to getliving.com, prepared by ClerksWell
+following the phase 1 review (28 September 2026). Structure and behaviour only; the visual
+design layer (Get Living's colours, type and imagery) comes next and goes in `src/css/theme.css`.
+
+## View
+Open `dist/index.html` in a browser. No server or install needed.
+
+## Prototypes
+1. Find a home — `pages/find-a-home.html`
+2. Property page — `pages/home.html` (opens any home via `?home=<id>`)
+3. Book a viewing — `pages/book-a-viewing.html`, plus the short enquiry at `pages/enquiry.html`
+4. Renting with us — `pages/renting-with-us.html`
+5. Neighbourhood template — `pages/neighbourhood.html` (Sherlock Quarter)
+
+Module library: `modules/library.html`. Requirements: `requirements/requirements.md`.
+
+## Build
+```
+node build-includes.js && node validate.js
+```
+Edit files in `src/`; `dist/` is generated. Header and footer live in `src/includes/`.
+Listings are sample data in `src/js/data.js`.
+
+## Status
+V1, internal review. Annotations are hidden by default; use "Show annotations" on any page.

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make an enquiry — Get Living prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="~/index.html">Home</a></li>
+          <li class="breadcrumb-item">Make an enquiry</li>
+        </ul>
+      </nav>
+
+      <div class="split">
+        <div>
+          <h1>Ask us anything</h1>
+          <p class="lead">Tell us a little about what you're looking for and the neighbourhood team will get back to you, usually within one working day.</p>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Prototype 3</span>The current form has around 13 required fields on one screen. This version asks for five, and makes the rest optional. Employment status, "how did you hear about us" and marketing consent move to the follow-up or the viewing.</p>
+
+          <!-- Short enquiry form (R33) -->
+          <p class="panel surface" id="enq-context" hidden>About: <span></span></p>
+          <form id="enquiry-form" novalidate>
+            <div class="form-grid">
+              <div class="field"><label for="enq-first">First name</label><input type="text" id="enq-first" autocomplete="given-name" required><p class="field-error" hidden>Enter your first name</p></div>
+              <div class="field"><label for="enq-last">Last name</label><input type="text" id="enq-last" autocomplete="family-name" required><p class="field-error" hidden>Enter your last name</p></div>
+              <div class="field"><label for="enq-email">Email</label><input type="email" id="enq-email" autocomplete="email" required><p class="field-error" hidden>Enter an email address like name@example.com</p></div>
+              <div class="field"><label for="enq-phone">Phone <span class="muted">(optional)</span></label><input type="tel" id="enq-phone" autocomplete="tel"></div>
+              <div class="field"><label for="enq-hood">Neighbourhood</label>
+                <select id="enq-hood" required>
+                  <option value="">Choose a neighbourhood</option>
+                  <option value="east-village">East Village, Stratford</option>
+                  <option value="elephant-central">Elephant Central</option>
+                  <option value="sherlock-quarter">Sherlock Quarter, Birmingham</option>
+                  <option value="new-maker-yards">New Maker Yards, Salford</option>
+                  <option value="one-maidenhead">One Maidenhead</option>
+                  <option value="the-oakgate">The Oakgate, Leatherhead</option>
+                  <option value="unsure">Not sure yet</option>
+                </select>
+                <p class="field-error" hidden>Choose a neighbourhood, or "Not sure yet"</p>
+              </div>
+              <div class="field"><label for="enq-when">When would you like to move in?</label>
+                <select id="enq-when" required><option value="">Choose one</option><option>Within a month</option><option>1–3 months</option><option>3–6 months</option><option>Just looking</option></select>
+                <p class="field-error" hidden>Choose when you'd like to move</p>
+              </div>
+              <div class="field full"><label for="enq-msg">Your question <span class="muted">(optional)</span></label><textarea id="enq-msg" rows="4"></textarea></div>
+            </div>
+
+            <div class="accordion" style="margin-bottom:1.25rem">
+              <div class="accordion-item">
+                <button type="button" class="accordion-title">Tell us more (optional) — helps us find the right home<span class="accordion-icon">&#9662;</span></button>
+                <div class="accordion-content">
+                  <div class="form-grid">
+                    <div class="field"><label for="enq-beds">Bedrooms</label><select id="enq-beds"><option value="">Any</option><option>Studio</option><option>1</option><option>2</option><option>3+</option></select></div>
+                    <div class="field"><label for="enq-budget">Monthly budget</label><select id="enq-budget"><option value="">Prefer not to say</option><option>Up to £1,500</option><option>£1,500–£2,000</option><option>£2,000–£3,000</option><option>£3,000+</option></select></div>
+                    <fieldset class="full"><legend>Will you bring a pet?</legend><div class="row"><label class="check"><input type="radio" name="enq-pet"> Yes</label><label class="check"><input type="radio" name="enq-pet"> No</label></div></fieldset>
+                    <fieldset class="full"><legend>Where are you moving from?</legend><div class="row"><label class="check"><input type="radio" name="enq-uk"> Within the UK</label><label class="check"><input type="radio" name="enq-uk"> Outside the UK</label></div></fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <label class="check field"><input type="checkbox" id="enq-news"> Email me new homes and events at Get Living</label>
+            <button type="submit" class="btn">Send enquiry</button>
+            <p class="field-hint">We'll only use your details to answer this enquiry unless you tick the box above. <a href="#">Privacy notice</a></p>
+          </form>
+
+          <div id="enquiry-done" class="confirm-box" hidden>
+            <div class="tick" aria-hidden="true">&#10003;</div>
+            <h2>Thanks, <span id="enq-done-name"></span></h2>
+            <p>Your enquiry has gone to the neighbourhood team. We'll reply within one working day.</p>
+            <p><a class="btn" href="~/pages/book-a-viewing.html">Book a viewing now</a></p>
+          </div>
+        </div>
+
+        <aside class="stack">
+          <div class="panel">
+            <h2 style="font-size:1.125rem">Rather talk?</h2>
+            <p>Call free on <strong>0808 164 4744</strong>.</p>
+            <p><a href="~/pages/book-a-viewing.html">Or book a viewing online</a></p>
+          </div>
+          <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Which fields does the CRM (HubSpot) need to route an enquiry to the right team? We've kept neighbourhood and move-in date required for that reason.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>
