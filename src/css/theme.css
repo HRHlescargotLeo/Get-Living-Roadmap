@@ -464,3 +464,9 @@ header.sticky.proto-nav { background: var(--gl-black); border-bottom: 0; }
 .home-card:hover .wf-placeholder.has-photo { transform: scale(1.03); }
 .hood-hero .wf-placeholder.has-photo { aspect-ratio: 4 / 3; background-position: center 35%; }
 @media (prefers-reduced-motion: reduce) { .home-card:hover .wf-placeholder.has-photo { transform: none; } }
+
+/* Find a home filter bar: controls and "More filters" share one height and baseline */
+.filter-sticky .filter-row { align-items: end; }
+.filter-sticky select, .filter-sticky input[type="date"] { height: 44px; padding-top: 0; padding-bottom: 0; line-height: 44px; box-sizing: border-box; }
+.filter-sticky .filter-row > .btn { height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; padding: 0 1.5rem; white-space: nowrap; }
+.filter-sticky .filter-row .field { margin-bottom: 0; }
