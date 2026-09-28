@@ -5,7 +5,12 @@ following the phase 1 review (28 September 2026). Structure and behaviour only; 
 design layer (Get Living's colours, type and imagery) comes next and goes in `src/css/theme.css`.
 
 ## View
-Open `dist/index.html` in a browser. No server or install needed.
+Live: https://hrhlescargotleo.github.io/Get-Living-Roadmap/
+
+Or open `docs/index.html` in a browser. No server or install needed.
+
+GitHub Pages is set to publish from the `docs/` folder on `main`
+(Settings → Pages → Deploy from a branch → `main` / `/docs`).
 
 ## Prototypes
 1. Find a home — `pages/find-a-home.html`
@@ -20,7 +25,7 @@ Module library: `modules/library.html`. Requirements: `requirements/requirements
 ```
 node build-includes.js && node validate.js
 ```
-Edit files in `src/`; `dist/` is generated. Header and footer live in `src/includes/`.
+Edit files in `src/`; `docs/` is generated (commit it, as GitHub Pages serves it). Header and footer live in `src/includes/`.
 Listings are sample data in `src/js/data.js`.
 
 ## Status

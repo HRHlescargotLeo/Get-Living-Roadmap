@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module library — Get Living prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Global header (R01, R04) -->
+  <header class="sticky site-header">
+    <div class="wf-proto-bar">
+      <div class="container">
+        <span>Get Living · greyscale prototype V1 · sample data</span>
+        <a href="../index.html">All prototypes</a>
+      </div>
+    </div>
+    <nav class="nav-primary" aria-label="Primary">
+      <div class="container nav-row">
+        <a class="nav-logo" href="../index.html" aria-label="Get Living home"><span class="wf-placeholder logo">Logo</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+        <ul class="nav-list" id="primary-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Locations &#9662;</a>
+            <div class="nav-flyout wide">
+              <div class="flyout-columns">
+                <div class="flyout-column">
+                  <h5>London</h5>
+                  <ul>
+                    <li><a href="../pages/neighbourhood.html">East Village, Stratford</a></li>
+                    <li><a href="../pages/neighbourhood.html">Elephant Central</a></li>
+                  </ul>
+                </div>
+                <div class="flyout-column">
+                  <h5>Midlands and North</h5>
+                  <ul>
+                    <li><a href="../pages/neighbourhood.html">Sherlock Quarter, Birmingham</a></li>
+                    <li><a href="../pages/neighbourhood.html">New Maker Yards, Salford</a></li>
+                  </ul>
+                </div>
+                <div class="flyout-column">
+                  <h5>South East</h5>
+                  <ul>
+                    <li><a href="../pages/neighbourhood.html">One Maidenhead</a></li>
+                    <li><a href="../pages/neighbourhood.html">The Oakgate, Leatherhead</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Homes &#9662;</a>
+            <div class="nav-flyout">
+              <ul>
+                <li><a href="../pages/find-a-home.html">Find a home</a></li>
+                <li><a href="../pages/find-a-home.html">Co-living</a></li>
+                <li><a href="../pages/find-a-home.html#saved">Saved homes</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../pages/renting-with-us.html">Renting with us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">The Edit</a></li>
+          <li class="nav-item nav-item--right"><a class="nav-link saved-link" href="../pages/find-a-home.html#saved">Saved (<span data-saved-count>0</span>)</a></li>
+          <li class="nav-item"><a class="btn" href="../pages/enquiry.html">Make an enquiry</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="flyout-backdrop" aria-hidden="true"></div>
+
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="../index.html">All prototypes</a></li>
+          <li class="breadcrumb-item">Module library</li>
+        </ul>
+      </nav>
+      <h1>Module library</h1>
+      <p class="lead">New components introduced by the five prototypes, each shown once. Existing site modules (header, footer, carousels, accordions) are not repeated here.</p>
+
+      <!-- Home card (R13, R14, R17) -->
+      <section>
+        <h2 class="section-title">Home card</h2>
+        <div class="home-grid">
+          <article class="home-card">
+            <div class="media">
+              <div class="wf-placeholder ratio-4-3">Photo carousel 4:3</div>
+              <div class="badges"><span class="badge solid">Available now</span><span class="badge">4 weeks rent free</span></div>
+              <button type="button" class="save-btn" data-save-id="clay0310" aria-pressed="false">Save</button>
+            </div>
+            <div class="body">
+              <div class="price">£1,295 <small>pcm</small></div>
+              <h3>1 bedroom, Clay</h3>
+              <p class="addr">New Maker Yards · M5 4RE</p>
+              <div class="facts"><div><b>538</b>sq ft (50 m²)</div><div><b>3</b>floor</div><div><b>1</b>bath</div><div><b>No</b>furnished</div></div>
+              <div class="actions"><a class="btn btn-sm" href="../pages/home.html">View this home</a><label class="check"><input type="checkbox"> Compare</label></div>
+            </div>
+          </article>
+          <div class="stack">
+            <p class="wf-note" data-note="1"><span class="wf-note-label">Used in</span>Find a home (list and map), similar homes on the property page. Availability badge always first; one offer badge at most.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key facts panel (R20) -->
+      <section>
+        <h2 class="section-title">Key facts panel</h2>
+        <div class="grid grid-3">
+          <aside class="panel">
+            <div class="price" style="font-size:2rem;font-weight:700">£1,450 <small>pcm</small></div>
+            <dl class="kv" style="margin:1rem 0">
+              <dt>Bedrooms</dt><dd>2</dd><dt>Size</dt><dd>732 sq ft</dd><dt>Floor</dt><dd>7</dd><dt>EPC</dt><dd>B</dd><dt>Council tax</dt><dd>Band C–E</dd>
+            </dl>
+            <a class="btn btn-block" href="../pages/book-a-viewing.html">Book a viewing</a>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Cost table (R21, R22) -->
+      <section>
+        <h2 class="section-title">Cost table</h2>
+        <div class="grid grid-2">
+          <table class="cost-table">
+            <tbody>
+              <tr><th scope="row">Rent<span class="sub">Paid monthly</span></th><td>£1,450</td></tr>
+              <tr><th scope="row">Wi-Fi<span class="sub">Included in your rent</span></th><td>Included</td></tr>
+              <tr><th scope="row">Electricity<span class="sub">Estimate</span></th><td>£66</td></tr>
+            </tbody>
+            <tfoot><tr><th scope="row">Estimated monthly total</th><td>£1,516</td></tr></tfoot>
+          </table>
+          <p class="wf-note" data-note="2"><span class="wf-note-label">Used in</span>Monthly cost estimate and move-in costs on the property page. Each row has a label, one line of explanation and a right-aligned amount.</p>
+        </div>
+      </section>
+
+      <!-- Option cards and slot picker (R30, R31) -->
+      <section>
+        <h2 class="section-title">Option cards and slot picker</h2>
+        <div class="option-cards" style="margin-bottom:1rem">
+          <label class="option-card"><input type="radio" name="lib-opt" checked><strong>In person</strong><span>30 minutes with our team</span></label>
+          <label class="option-card"><input type="radio" name="lib-opt"><strong>Video call</strong><span>One-to-one walkthrough</span></label>
+        </div>
+        <div class="slot-grid" style="max-width:480px">
+          <button type="button" class="slot-btn" aria-pressed="false">10:00</button>
+          <button type="button" class="slot-btn" aria-pressed="true">11:00</button>
+          <button type="button" class="slot-btn" disabled>12:30</button>
+          <button type="button" class="slot-btn" aria-pressed="false">14:30</button>
+        </div>
+      </section>
+
+      <!-- Neighbourhood modules (R50, R51, R55) -->
+      <section>
+        <h2 class="section-title">Neighbourhood modules</h2>
+        <div class="key-strip" style="margin-bottom:1.5rem">
+          <div><b>6</b><span>homes available now</span></div>
+          <div><b>£1,300</b><span>per month, from</span></div>
+          <div><b>4.67</b><span>HomeViews score</span></div>
+          <div><b>14 min</b><span>walk to the station</span></div>
+        </div>
+        <div class="size-cards" style="margin-bottom:1.5rem">
+          <a class="size-card" href="../pages/find-a-home.html"><span>1 bedroom</span><b>From £1,300 pcm</b><span class="count">2 available</span></a>
+          <a class="size-card none" href="../pages/find-a-home.html"><span>Studio</span><b>None right now</b><span class="count">Get an alert</span></a>
+        </div>
+        <ul class="event-list">
+          <li><div class="event-date">Oct<b>24</b></div><div><strong>Open house</strong><div class="wf-meta">Leasing suite · 11am to 3pm</div></div><span class="badge">Open to all</span></li>
+        </ul>
+      </section>
+
+      <!-- Process steps (R42) -->
+      <section>
+        <h2 class="section-title">Process steps</h2>
+        <ol class="process">
+          <li><h3>Find</h3><p>One line on this step.</p></li>
+          <li><h3>View</h3><p>One line on this step.</p></li>
+          <li><h3>Reserve</h3><p>One line on this step.</p></li>
+          <li><h3>Referencing</h3><p>One line on this step.</p></li>
+          <li><h3>Move in</h3><p>One line on this step.</p></li>
+        </ol>
+        <p class="wf-note" data-note="3"><span class="wf-note-label">Rule</span>Numbered only where the order is real. Used for the renting process and the booking confirmation.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Global footer (existing structure, unchanged) -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Our story</a></li>
+            <li><a href="#">Join the team</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Residents</h4>
+          <ul>
+            <li><a href="#">Resident app</a></li>
+            <li><a href="#">Resident portal log-in</a></li>
+            <li><a href="#">Resident events</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Living with us</h4>
+          <ul>
+            <li><a href="../pages/renting-with-us.html">Renting with us</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="../pages/find-a-home.html">Find a home</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="../pages/enquiry.html">Make an enquiry</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Complaints procedure</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wf-placeholder footer-logos">Awards and accreditation logos</div>
+      <div class="footer-bottom">
+        <span>&copy; Get Living · Privacy · Terms · Modern slavery statement</span>
+        <span>Wireframe — structure only, not a design</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

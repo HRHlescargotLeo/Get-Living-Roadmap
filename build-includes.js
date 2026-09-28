@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* build-includes.js
  *
- * Concatenates src/ into dist/, resolving <!-- @@include name.html --> against
+ * Concatenates src/ into docs/ (served by GitHub Pages), resolving <!-- @@include name.html --> against
  * src/includes/. Copies css/, js/ and assets/ across unchanged.
  *
  * Run from the project root:  node build-includes.js
@@ -15,7 +15,7 @@ const path = require('path');
 
 const root = __dirname;
 const srcDir = path.join(root, 'src');
-const outDir = path.join(root, 'dist');
+const outDir = path.join(root, 'docs');
 const includesDir = path.join(srcDir, 'includes');
 
 if (!fs.existsSync(srcDir)) {
@@ -23,7 +23,7 @@ if (!fs.existsSync(srcDir)) {
   process.exit(1);
 }
 
-/* Start from a clean dist/ so deleted pages do not linger and get shared. */
+/* Start from a clean docs/ so deleted pages do not linger and get shared. */
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
 
@@ -95,4 +95,6 @@ function walk(dir, base = '') {
 }
 
 walk(srcDir);
-console.log(`Built ${count} page(s) into dist/`);
+/* Tell GitHub Pages to serve files as they are, without Jekyll processing. */
+fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
+console.log(`Built ${count} page(s) into docs/`);

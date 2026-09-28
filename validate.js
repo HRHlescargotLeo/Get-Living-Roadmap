@@ -22,10 +22,10 @@ const fs = require('fs');
 const path = require('path');
 
 const root = __dirname;
-const distDir = path.join(root, 'dist');
+const distDir = path.join(root, 'docs');
 
 if (!fs.existsSync(distDir)) {
-  console.error('No dist/ directory. Run: node build-includes.js');
+  console.error('No docs/ directory. Run: node build-includes.js');
   process.exit(1);
 }
 
