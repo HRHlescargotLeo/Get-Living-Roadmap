@@ -452,3 +452,15 @@ header.sticky.proto-nav { background: var(--gl-black); border-bottom: 0; }
 #tab-epc .wf-placeholder::before, #epc-modal .wf-placeholder::before { display: none; }
 .wf-placeholder::before { opacity: 0.8; }
 .proto-home span { font-family: var(--gl-body); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gl-elderflower); margin-left: 0.25rem; vertical-align: middle; }
+
+/* --------------------------------------------------------------------------
+   Get Living photography (applied by js/photos.js once each image loads)
+   -------------------------------------------------------------------------- */
+.wf-placeholder.has-photo { background-size: cover; background-position: center; background-repeat: no-repeat; font-size: 0; text-shadow: none; }
+.wf-placeholder.has-photo::before { display: none; }
+.wf-placeholder.has-photo-tour { background-size: cover; background-position: center; font-size: 0; }
+.home-card .wf-placeholder.has-photo { transition: transform 0.4s ease; }
+.home-card .media { overflow: hidden; }
+.home-card:hover .wf-placeholder.has-photo { transform: scale(1.03); }
+.hood-hero .wf-placeholder.has-photo { aspect-ratio: 4 / 3; background-position: center 35%; }
+@media (prefers-reduced-motion: reduce) { .home-card:hover .wf-placeholder.has-photo { transform: none; } }

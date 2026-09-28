@@ -1,11 +1,14 @@
-# Get Living — website improvement prototypes (V2)
+# Get Living — website improvement prototypes (V2.1)
 
 Five clickable prototypes for improvements to getliving.com, prepared by ClerksWell following the
 phase 1 review (28 September 2026). The Get Living design layer (colours, type, buttons, imagery
 treatment) lives entirely in `src/css/theme.css`; remove that file to get the greyscale prototypes back.
 
-Photography is illustrated placeholders in the brand palette. Breve Display is licensed, so Playfair
-Display stands in for it until we have Get Living's font files.
+Photography is Get Living's own, loaded directly from getliving.com by `src/js/photos.js` (the
+mapping of images to homes and sections lives there). Where the images can't load, illustrated
+placeholders in the brand palette show instead. Photography © Get Living; the repository and site
+are public, so treat them accordingly. Breve Display is licensed, so Playfair Display stands in for
+it until we have Get Living's font files.
 
 ## View
 Live: https://hrhlescargotleo.github.io/Get-Living-Roadmap/

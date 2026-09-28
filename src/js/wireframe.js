@@ -730,6 +730,7 @@
     var app = $('#property-app');
     if (!app) return;
     var h = byId(param('home') || '') || byId('prin0706');
+    window.GL_CURRENT_HOME = h.id;
     var hood = HOODS[h.hood];
     var weekly = h.rent * 12 / 52;
 
@@ -840,6 +841,7 @@
     var app = $('#booking-app');
     if (!app) return;
     var h = byId(param('home') || '') || byId('prin0706');
+    window.GL_CURRENT_HOME = h.id;
     var hood = HOODS[h.hood];
     $all('[data-bk]').forEach(function (el) {
       var k = el.getAttribute('data-bk');
