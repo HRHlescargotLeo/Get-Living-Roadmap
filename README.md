@@ -1,8 +1,11 @@
-# Get Living — greyscale prototypes (V1.2)
+# Get Living — website improvement prototypes (V2)
 
-Five clickable, greyscale prototypes for improvements to getliving.com, prepared by ClerksWell
-following the phase 1 review (28 September 2026). Structure and behaviour only; the visual
-design layer (Get Living's colours, type and imagery) comes next and goes in `src/css/theme.css`.
+Five clickable prototypes for improvements to getliving.com, prepared by ClerksWell following the
+phase 1 review (28 September 2026). The Get Living design layer (colours, type, buttons, imagery
+treatment) lives entirely in `src/css/theme.css`; remove that file to get the greyscale prototypes back.
+
+Photography is illustrated placeholders in the brand palette. Breve Display is licensed, so Playfair
+Display stands in for it until we have Get Living's font files.
 
 ## View
 Live: https://hrhlescargotleo.github.io/Get-Living-Roadmap/
@@ -29,4 +32,4 @@ Edit files in `src/`; `docs/` is generated (commit it, as GitHub Pages serves it
 Listings are sample data in `src/js/data.js`.
 
 ## Status
-V1.2, internal review. Get Living's own header and footer are replaced by a prototype navigator. Notes are off by default; switch "Notes on" in the top bar to show what each prototype proposes and why, plus in-page annotations.
+V2, designed prototypes for internal review. Get Living's own header and footer are replaced by a prototype navigator. Notes are off by default; switch "Notes on" in the top bar to show what each prototype proposes and why, plus in-page annotations.
