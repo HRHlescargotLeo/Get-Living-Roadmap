@@ -10,24 +10,45 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <!-- Prototype navigator (replaces Get Living's own header, R01) -->
+  <!-- Prototype navigator (replaces Get Living's own header, R01).
+       Two sections: the five major improvements and the quick wins. -->
   <header class="sticky site-header proto-nav">
     <div class="container proto-nav-row">
       <a class="proto-home" href="../index.html" aria-label="Get Living prototypes, overview">getliving <span>prototypes</span></a>
-      <nav aria-label="Prototypes">
-        <ul class="proto-links">
-          <li><a href="../index.html" data-proto="index">Overview</a></li>
-          <li><a href="../pages/find-a-home.html" data-proto="find-a-home"><span class="n">1</span> Find a home</a></li>
-          <li><a href="../pages/home.html" data-proto="home"><span class="n">2</span> Property page</a></li>
-          <li><a href="../pages/book-a-viewing.html" data-proto="book-a-viewing enquiry"><span class="n">3</span> Book a viewing</a></li>
-          <li><a href="../pages/renting-with-us.html" data-proto="renting-with-us"><span class="n">4</span> Renting with us</a></li>
-          <li><a href="../pages/neighbourhood.html" data-proto="neighbourhood"><span class="n">5</span> Neighbourhoods</a></li>
-        </ul>
+      <nav class="proto-sections" aria-label="Sections">
+        <a href="../index.html" data-section-link="major">Major improvements</a>
+        <a href="../quick-wins/index.html" data-section-link="quick">Quick wins</a>
       </nav>
       <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
         <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
         <span class="notes-label">Notes off</span>
       </button>
+    </div>
+    <div class="proto-subnav">
+      <div class="container">
+        <nav aria-label="Major improvements" data-section="major">
+          <ul class="proto-links">
+            <li><a href="../index.html" data-proto="index">Overview</a></li>
+            <li><a href="../pages/find-a-home.html" data-proto="find-a-home"><span class="n">1</span> Find a home</a></li>
+            <li><a href="../pages/home.html" data-proto="home"><span class="n">2</span> Property page</a></li>
+            <li><a href="../pages/book-a-viewing.html" data-proto="book-a-viewing enquiry"><span class="n">3</span> Book a viewing</a></li>
+            <li><a href="../pages/renting-with-us.html" data-proto="renting-with-us"><span class="n">4</span> Renting with us</a></li>
+            <li><a href="../pages/neighbourhood.html" data-proto="neighbourhood"><span class="n">5</span> Neighbourhoods</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Quick wins" data-section="quick" hidden>
+          <ul class="proto-links">
+            <li><a href="../quick-wins/index.html" data-qw-link="index">All quick wins</a></li>
+            <li><a href="../quick-wins/index.html#search" data-qw-link="search">Finding a home</a></li>
+            <li><a href="../quick-wins/index.html#home" data-qw-link="home">Property page</a></li>
+            <li><a href="../quick-wins/index.html#trust" data-qw-link="trust">Proposition and trust</a></li>
+            <li><a href="../quick-wins/index.html#hoods" data-qw-link="hoods">Neighbourhoods</a></li>
+            <li><a href="../quick-wins/index.html#content" data-qw-link="content">Content</a></li>
+            <li><a href="../quick-wins/index.html#residents" data-qw-link="residents">Residents</a></li>
+            <li><a href="../quick-wins/index.html#look" data-qw-link="look">Look and feel</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 

@@ -263,25 +263,60 @@
 
   /* --- Prototype navigator: current page and previous / next ------------- */
   function initProtoNav() {
-    var file = (window.location.pathname.split('/').pop() || 'index.html').replace('.html', '') || 'index';
-    var links = Array.prototype.slice.call(document.querySelectorAll('.proto-links a[data-proto]'));
+    var path = window.location.pathname;
+    var file = (path.split('/').pop() || 'index.html').replace('.html', '') || 'index';
+    var quick = /\/quick-wins\//.test(path) || document.body.hasAttribute('data-qw-theme') || document.body.classList.contains('qw-index');
+    function label(a) { return a.textContent.replace(/\s+/g, ' ').trim(); }
+
+    // Section tabs and the matching sub-navigation
+    document.querySelectorAll('[data-section-link]').forEach(function (a) {
+      var on = (a.getAttribute('data-section-link') === 'quick') === quick;
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    document.querySelectorAll('.proto-subnav [data-section]').forEach(function (n) {
+      n.hidden = (n.getAttribute('data-section') === 'quick') !== quick;
+    });
+
+    var pager = document.querySelector('[data-proto-pager]');
+    var html = '';
+
+    if (quick) {
+      var theme = document.body.getAttribute('data-qw-theme') || 'index';
+      document.querySelectorAll('[data-qw-link]').forEach(function (a) {
+        if (a.getAttribute('data-qw-link') === theme) a.setAttribute('aria-current', 'page');
+      });
+      var list = window.GL_QUICK_WINS || [];
+      var at = -1;
+      for (var i = 0; i < list.length; i++) if (list[i].slug === file) at = i;
+      if (!pager) return;
+      if (at < 0) {
+        if (list.length) html = '<span></span><a class="next" href="' + list[0].slug + '.html"><span class="wf-meta">Start with</span>1 ' + list[0].title + '</a>';
+      } else {
+        html += at > 0 ? '<a class="prev" href="' + list[at - 1].slug + '.html"><span class="wf-meta">Previous</span>' + (at) + ' ' + list[at - 1].title + '</a>'
+                       : '<a class="prev" href="index.html"><span class="wf-meta">Back to</span>All quick wins</a>';
+        html += at < list.length - 1 ? '<a class="next" href="' + list[at + 1].slug + '.html"><span class="wf-meta">Next</span>' + (at + 2) + ' ' + list[at + 1].title + '</a>'
+                                     : '<a class="next" href="index.html"><span class="wf-meta">Back to</span>All quick wins</a>';
+      }
+      pager.innerHTML = html;
+      return;
+    }
+
+    var links = Array.prototype.slice.call(document.querySelectorAll('[data-section="major"] .proto-links a[data-proto]'));
     var index = -1;
     links.forEach(function (a, i) {
       var match = a.getAttribute('data-proto').split(' ').indexOf(file) !== -1;
       if (match) { a.setAttribute('aria-current', 'page'); index = i; }
     });
     var current = document.querySelector('.proto-links a[aria-current]');
-    if (current && current.scrollIntoView && window.innerWidth < 1024) {
-      var list = current.closest('.proto-links');
-      if (list) list.scrollLeft = current.offsetLeft - 16;
+    if (current && window.innerWidth < 1024) {
+      var ul = current.closest('.proto-links');
+      if (ul) ul.scrollLeft = current.offsetLeft - 16;
     }
-    var pager = document.querySelector('[data-proto-pager]');
     if (!pager || index < 0) return;
-    function label(a) { return a.textContent.replace(/\s+/g, ' ').trim(); }
-    var html = '';
     if (index > 0) html += '<a class="prev" href="' + links[index - 1].getAttribute('href') + '"><span class="wf-meta">Previous</span>' + label(links[index - 1]) + '</a>';
     else html += '<span></span>';
     if (index < links.length - 1) html += '<a class="next" href="' + links[index + 1].getAttribute('href') + '"><span class="wf-meta">Next</span>' + label(links[index + 1]) + '</a>';
+    else html += '<a class="next" href="' + links[0].getAttribute('href').replace('index.html', 'quick-wins/index.html') + '"><span class="wf-meta">Next</span>Quick wins</a>';
     pager.innerHTML = html;
   }
 
@@ -1045,6 +1080,97 @@
   }
 
 
+
+  /* --- Quick wins: Today / With this change switch ---------------------
+     Markup: [data-ba] containing buttons [data-ba-show="before|after"] and
+     panels .ba-before / .ba-after. Starts on "Today" so a reviewer sees
+     the current site first; the choice holds while moving between demos. */
+  function initBeforeAfter() {
+    var stored = null;
+    try { stored = window.sessionStorage.getItem('gl-ba'); } catch (e) { /* private mode */ }
+    document.querySelectorAll('[data-ba]').forEach(function (box) {
+      var buttons = box.querySelectorAll('[data-ba-show]');
+      function show(which, remember) {
+        box.setAttribute('data-ba-state', which);
+        box.querySelectorAll('.ba-before').forEach(function (p) { p.hidden = which !== 'before'; });
+        box.querySelectorAll('.ba-after').forEach(function (p) { p.hidden = which !== 'after'; });
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-ba-show') === which ? 'true' : 'false'); });
+        if (remember) { try { window.sessionStorage.setItem('gl-ba', which); } catch (e) { /* private mode */ } }
+        if (which === 'after') replayMotion(box);
+      }
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () { show(b.getAttribute('data-ba-show'), true); });
+      });
+      show(stored === 'after' ? 'after' : 'before', false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.target.closest && e.target.closest('input, select, textarea')) return;
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      var b = document.querySelector('[data-ba-show="' + (e.key === 'ArrowLeft' ? 'before' : 'after') + '"]');
+      if (b) b.click();
+    });
+  }
+
+  /* Motion demo: replays the entrance animation each time "after" shows. */
+  function replayMotion(root) {
+    (root || document).querySelectorAll('[data-motion]').forEach(function (el) {
+      el.classList.remove('play');
+      void el.offsetWidth;
+      el.classList.add('play');
+    });
+  }
+
+  /* --- Quick wins: small interactive demos ----------------------------- */
+  function initQuickWinDemos() {
+    // Load more (results per page)
+    document.querySelectorAll('[data-loadmore]').forEach(function (btn) {
+      var grid = document.getElementById(btn.getAttribute('data-loadmore'));
+      var remaining = parseInt(btn.getAttribute('data-remaining'), 10) || 0;
+      btn.addEventListener('click', function () {
+        var cards = grid.querySelectorAll('[data-extra][hidden]');
+        for (var i = 0; i < Math.min(6, cards.length); i++) cards[i].hidden = false;
+        remaining = Math.max(0, remaining - 6);
+        btn.textContent = remaining ? 'Load more homes (' + remaining + ' more)' : 'All homes shown';
+        if (!grid.querySelector('[data-extra][hidden]')) btn.disabled = true;
+      });
+    });
+
+    // Forms that just need validating and a confirmation
+    document.querySelectorAll('form[data-qw-form]').forEach(function (f) {
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validateForm(f)) return;
+        var done = document.getElementById(f.getAttribute('data-qw-form'));
+        f.hidden = true;
+        if (done) { done.hidden = false; done.setAttribute('tabindex', '-1'); done.focus(); }
+      });
+    });
+
+    // Copy a link
+    document.querySelectorAll('[data-copy]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var text = b.getAttribute('data-copy');
+        var ok = function () { toast('Link copied'); };
+        if (navigator.clipboard) navigator.clipboard.writeText(text).then(ok, function () { toast('Copy the link from the box'); });
+        else toast('Copy the link from the box');
+      });
+    });
+
+    // Replay button on the motion demo
+    document.querySelectorAll('[data-replay]').forEach(function (b) {
+      b.addEventListener('click', function () { replayMotion(document); });
+    });
+
+    // Mock dropdown menus (hover or click, Escape closes)
+    document.querySelectorAll('.mock-menu').forEach(function (m) {
+      var t = m.querySelector('.mock-menu-trigger');
+      if (!t) return;
+      function set(open) { m.classList.toggle('open', open); t.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+      t.addEventListener('click', function () { set(!m.classList.contains('open')); });
+      m.addEventListener('keydown', function (e) { if (e.key === 'Escape') { set(false); t.focus(); } });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initNav();
     initAccordions();
@@ -1063,5 +1189,7 @@
     initBooking();
     initEnquiry();
     initNeighbourhood();
+    initBeforeAfter();
+    initQuickWinDemos();
   });
 })();
