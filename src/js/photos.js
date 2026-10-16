@@ -144,6 +144,12 @@
       if (label(el) === 'resident photo') apply(el, RESIDENTS[i % RESIDENTS.length]);
     });
 
+    // Placeholders that name their own photo (quick-win demos)
+    root.querySelectorAll('.wf-placeholder[data-img]').forEach(function (el) {
+      var o = el.getAttribute('data-overlay');
+      apply(el, u(el.getAttribute('data-img')), o ? { overlay: o } : null);
+    });
+
     // Everything else matched on its label
     root.querySelectorAll('.wf-placeholder').forEach(function (el) {
       var src = LABEL[label(el)];

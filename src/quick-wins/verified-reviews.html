@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show verified reviews — Get Living quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="trust">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 12 of 28 · Proposition and trust</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>An independent review score and recent verified reviews from HomeViews, alongside the testimonials Get Living has chosen.</p></div>
+          <div><h2>Why</h2><p>Get Living has 1,357 verified reviews on HomeViews with an average of 4.42, but the site shows three testimonials in a carousel. Renters tend to trust an independent score more than a quote the company chose. This is mostly a matter of placing the score and a few recent reviews on the right pages.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Quick win 12: Show verified reviews -->
+    <div class="container qw-head">
+      <p class="qw-num">Quick win 12 · Proposition and trust</p>
+      <h1>Show verified reviews</h1>
+      <p class="lead">An independent review score and recent verified reviews from HomeViews, alongside the testimonials Get Living has chosen.</p>
+      <p class="qw-where">Also part of prototypes 4 and 5.</p>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">With this change</button>
+          </div>
+          <span class="ba-hint">Switch between the current site and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Three testimonials in a carousel.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/</span></div>
+            <div class="ba-frame-body">
+<div class="qw-sagedk"><h3 class="qw-display" style="text-align:center">our residents say...</h3><p style="text-align:center;max-width:60ch;margin:0 auto">[Resident testimonial from the current homepage]</p><p style="text-align:center;font-weight:700;margin-top:0.75rem">Resident name, Neighbourhood</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>With this change</b><span>An independent score, with the number of reviews behind it.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/</span></div>
+            <div class="ba-frame-body">
+<div class="grid grid-2"><div class="panel"><div class="review-score"><div><div class="big">4.42</div><div class="wf-meta">out of 5 · 1,357 verified reviews</div><div class="wf-placeholder logo" style="margin-top:0.5rem">HomeViews</div></div>
+<div class="bars"><div class="bar"><span>Location</span><i><span style="width:92%"></span></i><b>4.6</b></div><div class="bar"><span>Experience</span><i><span style="width:90%"></span></i><b>4.5</b></div><div class="bar"><span>Design</span><i><span style="width:90%"></span></i><b>4.5</b></div></div></div></div>
+<blockquote class="wf-quote"><p>[Most recent verified review, 30–60 words.]</p><cite>Resident · East Village · HomeViews</cite></blockquote></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

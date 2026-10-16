@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show the facts renters compare on every card — Get Living quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="search">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 1 of 28 · Finding a home</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Size, floor, bathrooms and furnished status on every search result, in place of a paragraph of capitals.</p></div>
+          <div><h2>Why</h2><p>People compare homes on a handful of facts: how big, which floor, how many bathrooms, furnished or not. Today&#x27;s cards lead with a paragraph of description that leaves most of those out, so the renter has to open each home to find them. Putting four facts on the card is a template change, and the data almost certainly exists already in the letting system.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Quick win 1: Show the facts renters compare on every card -->
+    <div class="container qw-head">
+      <p class="qw-num">Quick win 1 · Finding a home</p>
+      <h1>Show the facts renters compare on every card</h1>
+      <p class="lead">Size, floor, bathrooms and furnished status on every search result, in place of a paragraph of capitals.</p>
+      <p class="qw-where">Also part of prototype 1, Find a home.</p>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">With this change</button>
+          </div>
+          <span class="ba-hint">Switch between the current site and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>The card leads with a paragraph of description. Floor area, floor and bathrooms are missing.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/find-a-home/</span></div>
+            <div class="ba-frame-body">
+<div class="mini-grid"><article class="gl-card">
+  <div class="media"><div class="wf-placeholder ratio-4-3" data-img="property-images/SADL0307/202_guild_armchair_kitchen_living(1).jpg">Listing photo</div><span class="badge solid">Available now</span></div>
+  <div class="body">
+    <div class="price">£1,300 <small>pcm</small></div>
+    <strong>1 bedroom</strong>
+    <span class="muted">Sadlers Place, Birmingham, B5 6EG</span>
+    <p class="caps">Premium 1 BEDROOM FULLY FURNISHED apartment at Sherlock Quarter in Birmingham City Centre with open-plan living, dining and kitchen space. Enjoy a spacious bedroom and bathroom, with integrated STORAGE, alongside a GYM, CO-WORKING SPACES, LOUNGE &amp; courtyard GARDENS for PET-FRIENDLY living.</p>
+    <div><span class="btn btn-secondary btn-sm">View this home</span></div>
+  </div>
+</article><article class="gl-card">
+  <div class="media"><div class="wf-placeholder ratio-4-3" data-img="property-images/CLAY0402/A---713-Potters-P2-Sofa-Armchair-Kitchen.jpeg">Listing photo</div><span class="badge solid">Available now</span></div>
+  <div class="body">
+    <div class="price">£1,295 <small>pcm</small></div>
+    <strong>1 bedroom</strong>
+    <span class="muted">Clay, Manchester, M5 4RE</span>
+    <p class="caps">MOVE IN NOW! Modern home walkable to Castlefield and Spinningfields. Co-working space, Wi-Fi and maintenance all included.</p>
+    <div><span class="btn btn-secondary btn-sm">View this home</span></div>
+  </div>
+</article></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>With this change</b><span>Four facts in a row on every card; the description moves to the property page.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/find-a-home/</span></div>
+            <div class="ba-frame-body">
+<div class="mini-grid"><article class="home-card">
+  <div class="media"><div class="wf-placeholder ratio-4-3" data-img="property-images/SADL0307/202_guild_armchair_kitchen_living(1).jpg">Listing photo</div><div class="badges"><span class="badge solid">Available now</span></div><span class="save-btn" aria-hidden="true">Save</span></div>
+  <div class="body">
+    <div class="price">£1,300 <small>pcm</small></div>
+    <h3>1 bedroom, Sadlers Place</h3>
+    <p class="addr">Sherlock Quarter · B5 6EG</p>
+    <div class="facts"><div><b>527</b>sq ft</div><div><b>2</b>floor</div><div><b>1</b>bath</div><div><b>Yes</b>furnished</div></div>
+    
+    <div class="actions"><span class="btn btn-sm">View this home</span></div>
+  </div>
+</article><article class="home-card">
+  <div class="media"><div class="wf-placeholder ratio-4-3" data-img="property-images/CLAY0402/A---713-Potters-P2-Sofa-Armchair-Kitchen.jpeg">Listing photo</div><div class="badges"><span class="badge solid">Available now</span></div><span class="save-btn" aria-hidden="true">Save</span></div>
+  <div class="body">
+    <div class="price">£1,295 <small>pcm</small></div>
+    <h3>1 bedroom, Clay</h3>
+    <p class="addr">New Maker Yards · M5 4RE</p>
+    <div class="facts"><div><b>538</b>sq ft</div><div><b>3</b>floor</div><div><b>1</b>bath</div><div><b>No</b>furnished</div></div>
+    
+    <div class="actions"><span class="btn btn-sm">View this home</span></div>
+  </div>
+</article></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

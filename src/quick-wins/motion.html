@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motion with restraint — Get Living quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="look">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 28 of 28 · Look and feel</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A few deliberate moments of movement: cards that rise into place and lift when you point at them.</p></div>
+          <div><h2>Why</h2><p>Apart from the carousels, the site is largely still. A small amount of considered motion – content easing into place, cards lifting on hover – makes it feel more current without getting in the way, and it respects visitors who have asked their device to reduce motion.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Quick win 28: Motion with restraint -->
+    <div class="container qw-head">
+      <p class="qw-num">Quick win 28 · Look and feel</p>
+      <h1>Motion with restraint</h1>
+      <p class="lead">A few deliberate moments of movement: cards that rise into place and lift when you point at them.</p>
+      
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">With this change</button>
+          </div>
+          <span class="ba-hint">Switch between the current site and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Static cards.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/</span></div>
+            <div class="ba-frame-body">
+<div class="mini-grid"><div class="mini-card"><div class="wf-placeholder ratio-16-9" data-img="2023/07/EV-Summer-Fete-23-People-Grass-520x680-1.jpg">Photo</div><div class="body"><b>East Village</b>Stratford, London</div></div><div class="mini-card"><div class="wf-placeholder ratio-16-9" data-img="2025/02/sherlock_quarter_woman_bike_520x680.jpg">Photo</div><div class="body"><b>Sherlock Quarter</b>Birmingham</div></div><div class="mini-card"><div class="wf-placeholder ratio-16-9" data-img="2025/12/east-village-cycling-couple-1980x1320-1-1400x934.jpg">Photo</div><div class="body"><b>Elephant Central</b>London</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>With this change</b><span>Cards rise into place and lift on hover. Press Replay to see it again.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/</span></div>
+            <div class="ba-frame-body">
+<div class="mini-grid" data-motion><div class="mini-card reveal lift"><div class="wf-placeholder ratio-16-9" data-img="2023/07/EV-Summer-Fete-23-People-Grass-520x680-1.jpg">Photo</div><div class="body"><b>East Village</b>Stratford, London</div></div><div class="mini-card reveal lift"><div class="wf-placeholder ratio-16-9" data-img="2025/02/sherlock_quarter_woman_bike_520x680.jpg">Photo</div><div class="body"><b>Sherlock Quarter</b>Birmingham</div></div><div class="mini-card reveal lift"><div class="wf-placeholder ratio-16-9" data-img="2025/12/east-village-cycling-couple-1980x1320-1-1400x934.jpg">Photo</div><div class="body"><b>Elephant Central</b>London</div></div></div><p style="margin-top:1rem"><button type="button" class="btn btn-secondary btn-sm" data-replay>Replay</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

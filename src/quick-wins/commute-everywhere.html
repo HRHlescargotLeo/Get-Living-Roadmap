@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The commute calculator on every neighbourhood — Get Living quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="hoods">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 17 of 28 · Neighbourhoods</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>The commute checker East Village already has, on every neighbourhood page.</p></div>
+          <div><h2>Why</h2><p>East Village&#x27;s page has a &#x27;Calculate your commute&#x27; tool; the other neighbourhood pages we looked at describe transport in prose. Commute is one of the first questions a renter asks of a place, and the tool already exists on the site.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Quick win 17: The commute calculator on every neighbourhood -->
+    <div class="container qw-head">
+      <p class="qw-num">Quick win 17 · Neighbourhoods</p>
+      <h1>The commute calculator on every neighbourhood</h1>
+      <p class="lead">The commute checker East Village already has, on every neighbourhood page.</p>
+      <p class="qw-where">Also part of prototype 5, Neighbourhoods.</p>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">With this change</button>
+          </div>
+          <span class="ba-hint">Switch between the current site and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Transport described in a paragraph.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/our-neighbourhoods/sherlock-quarter/</span></div>
+            <div class="ba-frame-body">
+<p class="lead" style="max-width:70ch">Within walking distance of the Bullring and key public transport routes, Sherlock Quarter is here to put you front and centre, just a 14-minute walk from New Street Station.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>With this change</b><span>The same commute checker East Village has. Try a destination.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/our-neighbourhoods/sherlock-quarter/</span></div>
+            <div class="ba-frame-body">
+<div class="panel" style="max-width:640px"><h3>Your commute time</h3><form data-commute novalidate><div class="form-grid"><div class="field"><label for="qw-c2">Destination</label><input type="text" id="qw-c2" placeholder="Office, university or postcode" required><p class="field-error" hidden>Enter a place or postcode</p></div><div class="field"><label for="qw-c2m">Travel type</label><select id="qw-c2m"><option value="transit">Public transport</option><option value="cycle">Cycling</option><option value="walk">Walking</option><option value="drive">Driving</option></select></div></div><button type="submit" class="btn">Check journey time</button></form><div class="commute-result" hidden></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

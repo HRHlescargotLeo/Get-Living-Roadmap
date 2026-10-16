@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&quot;From&quot; prices by home size on neighbourhood pages — Get Living quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="hoods">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 16 of 28 · Neighbourhoods</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Each home size on a neighbourhood page shows its lowest live rent and how many are available.</p></div>
+          <div><h2>Why</h2><p>Neighbourhood pages describe each home size but not what it costs, so a renter has to leave the page and search to find out. The prices and counts already exist in the listings feed; showing the lowest rent and the number available for each size is a small template change that stays current by itself.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Quick win 16: &quot;From&quot; prices by home size on neighbourhood pages -->
+    <div class="container qw-head">
+      <p class="qw-num">Quick win 16 · Neighbourhoods</p>
+      <h1>&quot;From&quot; prices by home size on neighbourhood pages</h1>
+      <p class="lead">Each home size on a neighbourhood page shows its lowest live rent and how many are available.</p>
+      <p class="qw-where">Also part of prototype 5, Neighbourhoods.</p>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">With this change</button>
+          </div>
+          <span class="ba-hint">Switch between the current site and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Home sizes described, with no prices.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/our-neighbourhoods/east-village/</span></div>
+            <div class="ba-frame-body">
+<h3 class="qw-display" style="margin-bottom:1rem">apartments for rent at east village</h3><div class="perk-grid"><div class="perk"><b class="qw-display">studio</b><p class="wf-meta">A cosy studio in East Village with pockets of space for dining and relaxing.</p><span class="btn btn-secondary btn-sm">Find a home</span></div><div class="perk"><b class="qw-display">1 bedroom</b><p class="wf-meta">One bedroom flats with open plan dining and living area.</p><span class="btn btn-secondary btn-sm">Find a home</span></div><div class="perk"><b class="qw-display">2 bedrooms</b><p class="wf-meta">Modern two bedroom flats with plenty of hidden storage.</p><span class="btn btn-secondary btn-sm">Find a home</span></div><div class="perk"><b class="qw-display">3 bedrooms</b><p class="wf-meta">Three bedroom flats with Zone 2 connectivity.</p><span class="btn btn-secondary btn-sm">Find a home</span></div><div class="perk"><b class="qw-display">4 bedrooms</b><p class="wf-meta">Four bedroom townhouses and apartments with space for social and family life.</p><span class="btn btn-secondary btn-sm">Find a home</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>With this change</b><span>Lowest live rent and number available for each size (sample figures).</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/our-neighbourhoods/east-village/</span></div>
+            <div class="ba-frame-body">
+<h3 class="qw-display" style="margin-bottom:1rem">apartments for rent at east village</h3><div class="size-cards"><a class="size-card" href="#"><span>Studio</span><b>From £1,895 pcm</b><span class="count">1 available</span></a><a class="size-card" href="#"><span>1 bedroom</span><b>From £2,250 pcm</b><span class="count">1 available</span></a><a class="size-card" href="#"><span>2 bedrooms</span><b>From £2,995 pcm</b><span class="count">2 available</span></a><a class="size-card" href="#"><span>3 bedrooms</span><b>From £3,595 pcm</b><span class="count">1 available</span></a><a class="size-card" href="#"><span>4 bedrooms</span><b>From £4,695 pcm</b><span class="count">1 available</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

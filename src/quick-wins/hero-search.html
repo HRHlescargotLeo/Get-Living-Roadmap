@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search in the homepage hero — Get Living quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="look">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 25 of 28 · Look and feel</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A compact search under the homepage headline, so renters can start looking straight away.</p></div>
+          <div><h2>Why</h2><p>The homepage opens with the headline and a single &#x27;Rent a home&#x27; button, which leads to the search page. Putting three search fields in the hero saves a click for the most common task on the site, and the search page already handles the query.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Quick win 25: Search in the homepage hero -->
+    <div class="container qw-head">
+      <p class="qw-num">Quick win 25 · Look and feel</p>
+      <h1>Search in the homepage hero</h1>
+      <p class="lead">A compact search under the homepage headline, so renters can start looking straight away.</p>
+      
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">With this change</button>
+          </div>
+          <span class="ba-hint">Switch between the current site and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>One button that leads to the search page.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/</span></div>
+            <div class="ba-frame-body">
+<div class="gl-hero"><div class="wf-placeholder ratio-16-9" data-img="2024/04/EV-Victory-Parade-Signorelli-People-Waiting-by-Frank-Da-Silva-1920x1080-1-1400x788.jpeg" data-overlay="linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6))">Homepage hero photo</div><h2 class="qw-display">live in neighbourhoods where everyone can connect and thrive</h2><div><span class="btn btn-secondary">Rent a home</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>With this change</b><span>Where, bedrooms and move-in date, straight from the homepage.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>getliving.com/</span></div>
+            <div class="ba-frame-body">
+<div class="gl-hero"><div class="wf-placeholder ratio-16-9" data-img="2024/04/EV-Victory-Parade-Signorelli-People-Waiting-by-Frank-Da-Silva-1920x1080-1-1400x788.jpeg" data-overlay="linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6))">Homepage hero photo</div><h2 class="qw-display">live in neighbourhoods where everyone can connect and thrive</h2><form class="hero-search" onsubmit="return false" aria-label="Search homes"><div class="field"><label for="hs-where">Where</label><select id="hs-where"><option>All neighbourhoods</option><option>London</option><option>Birmingham</option><option>Manchester</option></select></div><div class="field"><label for="hs-beds">Bedrooms</label><select id="hs-beds"><option>Any</option><option>Studio</option><option>1</option><option>2</option><option>3+</option></select></div><div class="field"><label for="hs-when">Move in by</label><input type="date" id="hs-when"></div><button class="btn" type="submit">Search</button></form></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

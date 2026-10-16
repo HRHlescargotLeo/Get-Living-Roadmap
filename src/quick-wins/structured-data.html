@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structured data for homes, reviews and FAQs — Get Living quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="content">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 20 of 28 · Content and search visibility</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Behind-the-scenes markup that makes pages eligible for richer results in search engines and AI tools.</p></div>
+          <div><h2>Why</h2><p>Get Living&#x27;s enquiry form lists &#x27;AI search, e.g. ChatGPT, Gemini&#x27; as a source, so some renters are already finding it that way. Standard schema.org markup for listings, FAQs and reviews tells search engines and AI tools exactly what each page contains. Whether a richer result appears is up to the search engine; the markup makes the page eligible. Nothing changes visually on the site itself.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Quick win 20: Structured data for homes, reviews and FAQs -->
+    <div class="container qw-head">
+      <p class="qw-num">Quick win 20 · Content and search visibility</p>
+      <h1>Structured data for homes, reviews and FAQs</h1>
+      <p class="lead">Behind-the-scenes markup that makes pages eligible for richer results in search engines and AI tools.</p>
+      
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">With this change</button>
+          </div>
+          <span class="ba-hint">Switch between the current site and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>A plain search result (illustrative).</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>Search results</span></div>
+            <div class="ba-frame-body">
+<div class="serp"><div class="url">www.getliving.com › our-neighbourhoods › east-village</div><div class="title">Apartments to Rent in East London | Get Living</div><p class="desc">Discover apartments to rent in East Village, with a range of studios and 1-4 bedrooms to choose from…</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>With this change</b><span>The same page with review and FAQ markup, as a search engine may show it (illustrative).</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>Search results</span></div>
+            <div class="ba-frame-body">
+<div class="serp"><div class="url">www.getliving.com › our-neighbourhoods › east-village</div><div class="title">Apartments to Rent in East London | Get Living</div><div class="stars">★★★★☆ Rating: 4.4 · 849 reviews · From £1,895 per month</div><p class="desc">Discover apartments to rent in East Village, with a range of studios and 1-4 bedrooms to choose from…</p><div class="serp-faq"><div>Is Wi-Fi included in the rent? <span>⌄</span></div><div>Are pets allowed at East Village? <span>⌄</span></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>
